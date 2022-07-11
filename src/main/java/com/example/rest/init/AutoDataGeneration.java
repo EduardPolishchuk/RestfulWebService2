@@ -20,7 +20,7 @@ public class AutoDataGeneration implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         List<DataClass> dataToStore = IntStream.rangeClosed(0, 100)
                 .mapToObj(num -> DataClass.builder()
                         .content("Some content: " + num)
