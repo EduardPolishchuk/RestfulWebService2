@@ -21,7 +21,7 @@ public class AutoDataGeneration implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        List<DataClass> dataToStore = IntStream.rangeClosed(0, 100)
+        List<DataClass> dataToStore = IntStream.rangeClosed(1, 100)
                 .mapToObj(num -> DataClass.builder()
                         .content("Some content: " + num)
                         .build()
