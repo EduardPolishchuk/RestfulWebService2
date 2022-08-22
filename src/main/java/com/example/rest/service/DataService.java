@@ -47,4 +47,11 @@ public class DataService {
 
         return dataClassRepository.saveAll(dataClasses);
     }
+
+    @NonNull
+    public DataClass saveData(DataClass dataClass) {
+        log.info("Save data: {}", dataClass);
+
+        return dataClassRepository.save(dataClass);
+    }
 }
